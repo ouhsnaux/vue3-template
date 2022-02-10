@@ -1,0 +1,41 @@
+// 通用样式，不限于业务
+// 单行文本溢出添加省略号
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// 多行溢出
+@mixin text-ellipsis-multi($n) {
+  .text-ellipsis-#{$n} {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $n;
+    overflow: hidden
+  }
+}
+@include text-ellipsis-multi(2);
+@include text-ellipsis-multi(3);
+
+// 清除浮动
+.clearfix {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+// 隐藏
+.disappear {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.star-before::before {
+  content: '*';
+  color: #f56c6c;
+  margin-right: 4px;
+}
