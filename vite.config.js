@@ -10,4 +10,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: 80,
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://www.baidu.com',
+        changeOrigin: true,
+        rewrite: (url) => url.replace(/^\/api/, ''),
+      },
+    },
+  },
 });
