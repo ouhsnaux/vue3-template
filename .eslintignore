@@ -1,4 +1,6 @@
 node_modules
 iconfont.js
 vite-env.d.ts
-.eslintcache
+
+auto-imports.d.ts
+components.d.ts

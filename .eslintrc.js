@@ -27,6 +27,15 @@ module.exports = {
     // fix: 'vite' should be listed in the project's dependencies, not devDependencies.
     'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/vite.config.ts'] }],
     'import/prefer-default-export': 0,
+    // 引用ts和js文件不用添加后缀
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        ts: 'never',
+      },
+    ],
 
     'prettier/prettier': [
       'error',
@@ -38,19 +47,12 @@ module.exports = {
         htmlWhitespaceSensitivity: 'ignore',
       },
     ],
-    // 引用ts和js文件不用添加后缀
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        ts: 'never',
-      },
-    ],
 
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+
+    'vue/multi-word-component-names': 'off',
   },
   settings: {
     'import/resolver': {

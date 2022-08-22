@@ -1,3 +1,4 @@
+/* eslint-disable */
 const numberTypeKey = ['VITE_API_TIME_OUT'];
 // TODO 解决eslint报错问题
 export const useEnv = (env: Recordable): ImportMetaEnv =>

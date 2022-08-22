@@ -7,6 +7,7 @@
     "preview": "vite preview",
     "lint": "eslint --cache --ext .vue,.ts ./",
     "lint:fix": "eslint --fix --ext .ts,.vue ./",
+    "stylelint": "stylelint **/*.scss",
     "prepare": "husky install",
     "report": "cross-env REPORT=true npm run build"
   },
@@ -18,6 +19,8 @@
     "vue-router": "^4.1.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/node": "^18.7.6",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
@@ -47,5 +50,11 @@
     "vite": "^3.0.0",
     "vite-plugin-mock": "^2.9.6",
     "vue-tsc": "^0.38.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
