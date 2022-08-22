@@ -1,4 +1,4 @@
-export const deepClone = <T, K extends keyof T>(data: T, map = new Map<any, any>()): T => {
+export const deepClone = <T>(data: T, map = new Map<any, any>()): T => {
   if (typeof data !== 'object' || data === null) {
     return data;
   }
