@@ -5,15 +5,18 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 // 多行溢出
 @mixin text-ellipsis-multi($n) {
   .text-ellipsis-#{$n} {
+    /* stylelint-disable-next-line */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $n;
-    overflow: hidden
+    overflow: hidden;
   }
 }
+
 @include text-ellipsis-multi(2);
 @include text-ellipsis-multi(3);
 
@@ -30,6 +33,7 @@
 .disappear {
   display: none;
 }
+
 .hidden {
   visibility: hidden;
 }

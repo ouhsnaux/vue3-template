@@ -1,27 +1,42 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## 环境设置
-
-node version >= 12
-npm version >= 6
-编辑器插件 Volar
+# 介绍
 
 ## 技术栈
 
-* vite
-* Vue Router
-* Vuex
+* Vue 3
+* TypeScript
+* Vite
+* Vuex4
+* Pinia
 * Element Plus
-* SCSS
-* axios
+* Sass
+* Mock
 
-<!-- TODO ts -->
+## 规范
 
-## 兼容
+* EditorConfig
+* Eslint airbnb-base
+* Prettier
+* TS
+* stylelint-scss
 
-* Edge ≥ 79
-* Firefox ≥ 78
-* Chrome ≥ 64
-* Safari ≥ 12
+<!-- TODO -->
+* git commit 规范
+
+## 其它优化
+
+* 别名 `@/: src/`
+* 打包分析
+
+## 命令
+
+## 环境变量
+
+* VITE_USE_MOCK 是否使用mock
+
+## 问题
+
+<!-- TODO -->
+
+* 跳转源文件老是跳转不必要的 .d.ts
+* 环境变量能否使用boolean
+* 测试mock是否被打进生产包

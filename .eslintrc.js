@@ -2,16 +2,21 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    // TODO
     'vue/setup-compiler-macros': true,
   },
   extends: [
-    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/vue3-recommended',
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
     '@vue/prettier',
   ],
+  plugins: ['@typescript-eslint', 'import'],
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
   },
   rules: {
     'no-console': 1,
@@ -19,7 +24,8 @@ module.exports = {
     'func-names': 0,
 
     // import规则目前未添加 vite.config.js
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/vite.config.js'] }],
+    // fix: 'vite' should be listed in the project's dependencies, not devDependencies.
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/vite.config.ts'] }],
     'import/prefer-default-export': 0,
 
     'prettier/prettier': [
@@ -32,12 +38,25 @@ module.exports = {
         htmlWhitespaceSensitivity: 'ignore',
       },
     ],
+    // 引用ts和js文件不用添加后缀
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        ts: 'never',
+      },
+    ],
+
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
   settings: {
     'import/resolver': {
       alias: {
         map: [['@', './src']],
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.vue', '.js', '.ts'],
       },
     },
   },
