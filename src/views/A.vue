@@ -1,10 +1,9 @@
 <template>
-  <div class=""></div>
+  <div class="">asjfdipiajsdf</div>
 </template>
 
 <script>
 export default {
-  name: 'SrcA',
   components: {},
   props: {},
   data() {
