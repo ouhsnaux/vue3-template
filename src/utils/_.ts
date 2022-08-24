@@ -17,8 +17,10 @@ export const deepClone = <T>(data: T, map = new Map<any, any>()): T => {
   const target = Array.isArray(data) ? [] : {};
   map.set(data, target);
   Object.keys(data).forEach((key) => {
+    // @ts-ignore
     target[key] = deepClone(data[key], map);
   });
+  // @ts-ignore
   return target;
 };
 

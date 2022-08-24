@@ -6,4 +6,5 @@ export const extract = <T, K extends keyof T>(arr: Array<T>, key: K): Array<T[K]
   arr.map((item) => item[key]);
 
 // 获取最后一个值
-export const getLast = <T>(arr: Array<T>) => (isEmpty(arr) ? null : arr[arr.length - 1]);
+export const getLast = <T>(arr: Array<T>, index = 1) =>
+  isEmpty(arr) ? null : arr[arr.length - index];

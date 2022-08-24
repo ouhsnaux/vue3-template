@@ -1,14 +1,22 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import Layout from '@/components/Layout/index.vue';
 import NotFound from '@/components/NotFound.vue';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/a',
-    component: () => import('@/views/A.vue'),
+    path: '/login',
+    component: () => import('@/views/login/index.vue'),
   },
   {
-    path: '/hello',
-    component: () => import('@/views/HelloWorld.vue'),
+    path: '/',
+    component: Layout,
+    redirect: 'input',
+    children: [
+      {
+        path: 'input',
+        component: () => import('@/views/input/index.vue'),
+      },
+    ],
   },
   {
     path: '/:_(.*)*',

@@ -16,8 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-    }
+    },
+    "types": ["unplugin-vue-define-options"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "build/**/*.ts", "build/**/*.d.ts","src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "build/**/*.ts", "build/**/*.d.ts", "mock/**/*.ts","src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

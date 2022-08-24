@@ -7,13 +7,22 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    A: typeof import('./src/components/A.vue')['default']
+    _header: typeof import('./src/components/Layout/_header.vue')['default']
+    _menu: typeof import('./src/components/Layout/_menu.vue')['default']
+    CheckboxGroup: typeof import('./src/components/CustomInput/CheckboxGroup.vue')['default']
+    ElCheckboxGroup: typeof import('element-plus/es')['ElCheckboxGroup']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
-    ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    Layout: typeof import('./src/components/Layout/index.vue')['default']
     NotFound: typeof import('./src/components/NotFound.vue')['default']
-    ParentView: typeof import('./src/components/ParentView.vue')['default']
+    NumberInput: typeof import('./src/components/CustomInput/NumberInput.vue')['default']
+    RadioGroup: typeof import('./src/components/CustomInput/RadioGroup.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SelectInput: typeof import('./src/components/CustomInput/SelectInput.vue')['default']
   }
 }

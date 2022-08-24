@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { useEnv } from '../../build';
 import { getToken, removeToken } from './token';
+import 'element-plus/es/components/message/style/css';
 
 interface Response {
   code: number;
@@ -9,9 +10,9 @@ interface Response {
   data: object;
 }
 
-const { VITE_API_TIME_OUT } = useEnv(import.meta.env);
+const { VITE_API_TIME_OUT, VITE_API_BASE_URL } = useEnv(import.meta.env);
 const request = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: VITE_API_BASE_URL,
   timeout: VITE_API_TIME_OUT,
   headers: {
     'Content-Type': 'application/json;charset=utf-8',

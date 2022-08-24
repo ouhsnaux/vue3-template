@@ -18,14 +18,13 @@
 * Prettier
 * TS
 * stylelint-scss
-
-<!-- TODO -->
 * git commit 规范
 
 ## 其它优化
 
 * 别名 `@/: src/`
 * 打包分析
+* 添加defineOptions `unplugin-vue-define-options`
 
 ## 命令
 
