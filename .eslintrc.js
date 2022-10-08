@@ -20,10 +20,13 @@ module.exports = {
     parser: '@typescript-eslint/parser',
   },
   rules: {
-    'no-console': 1,
+    // 'no-console': 1,
     'no-param-reassign': 0,
     'func-names': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'max-classes-per-file': 0,
+    // ts 函数参数不会使用，不需要报错
+    'no-unused-vars': 0,
 
     // import规则目前未添加 vite.config.js
     // fix: 'vite' should be listed in the project's dependencies, not devDependencies.
@@ -65,7 +68,7 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [['@', './src']],
-        extensions: ['.vue', '.js', '.ts'],
+        extensions: ['.vue', '.ts', '.js'],
       },
     },
   },

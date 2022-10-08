@@ -1,6 +1,8 @@
 // 需要与.env配置文件保持一致
 // const baseURL = '/api';
 
+// TODO 如何才能使用import.meta.glob
+
 export default [
   {
     url: '/api/option',

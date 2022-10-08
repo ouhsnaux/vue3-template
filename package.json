@@ -12,6 +12,7 @@
     "report": "cross-env REPORT=true npm run build"
   },
   "dependencies": {
+    "async-validator": "^4.2.5",
     "axios": "^0.27.2",
     "element-plus": "^2.2.13",
     "pinia": "^2.0.18",

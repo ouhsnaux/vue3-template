@@ -3,7 +3,7 @@ import { computed } from 'vue';
 const useVModel = <T extends Record<string, any>>(
   props: T,
   emit: Function,
-  { name = 'modalValue' } = {}
+  { name = 'modelValue' } = {}
 ) => {
   return computed({
     get() {

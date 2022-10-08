@@ -44,3 +44,20 @@ export function debounce(func: Function, time = 200, immediate = false) {
     }, time);
   };
 }
+
+export const getDeepValue = (obj: Record<string, any>, path?: string) => {
+  if (!path) {
+    return obj;
+  }
+  return path.split('.').reduce((acc, cur) => {
+    if (!acc) {
+      throw new Error('递归获取对象深层属性的值出错，请确保传递了正确的路径');
+    }
+    return acc[cur];
+  }, obj);
+};
+
+export const setDeepValue = (obj: Record<string, any>, path: string, value: any) => {
+  const lastDotIndex = path.lastIndexOf('.');
+  getDeepValue(obj, path.slice(0, lastDotIndex))[path.slice(lastDotIndex + 1)] = value;
+};

@@ -30,6 +30,16 @@
       <CheckboxGroup v-model="check2" type="button" :options="options2" />
       {{ check2 }}
     </div>
+    <div>
+      单选1
+      <RadioGroup v-model="radio1" :options="options1" />
+      {{ radio1 }}
+    </div>
+    <div>
+      单选2
+      <RadioGroup v-model="radio2" type="button" :options="options2" />
+      {{ radio2 }}
+    </div>
   </div>
 </template>
 
@@ -37,6 +47,7 @@
 import { ref, reactive } from 'vue';
 import SelectInput from '@/components/CustomInput/SelectInput.vue';
 import { getOptions } from '@/api/options';
+import RadioGroup from '@/components/CustomInput/RadioGroup.vue';
 
 const number = ref();
 const select1 = ref();
@@ -74,6 +85,8 @@ const select3 = ref();
 const getOptions3 = ref(getOptions);
 const check1 = ref();
 const check2 = ref();
+const radio1 = ref();
+const radio2 = ref();
 </script>
 
 <style lang="scss" scoped></style>

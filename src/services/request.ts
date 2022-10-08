@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { useEnv } from '../../build';
 import { getToken, removeToken } from './token';
-import 'element-plus/es/components/message/style/css';
+// import 'element-plus/es/components/message/style/css';
 
 interface Response {
   code: number;

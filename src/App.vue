@@ -1,8 +1,4 @@
 <template>
-  <ElConfigProvider :locale="zhCn">
-    <router-view></router-view>
-  </ElConfigProvider>
+  <router-view></router-view>
 </template>
-<script lang="ts" setup>
-import zhCn from 'element-plus/es/locale/lang/zh-cn';
-</script>
+<script lang="ts" setup></script>

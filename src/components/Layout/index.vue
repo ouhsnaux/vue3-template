@@ -45,5 +45,6 @@ import LayoutHeader from './_header.vue';
   width: 100%;
   flex: auto;
   padding: 20px;
+  overflow: auto;
 }
 </style>

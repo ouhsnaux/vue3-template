@@ -39,3 +39,4 @@
 * 跳转源文件老是跳转不必要的 .d.ts
 * 环境变量能否使用boolean
 * 测试mock是否被打进生产包
+* mock中无法使用import.meta 和 require.context

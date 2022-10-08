@@ -16,6 +16,26 @@ const routes: RouteRecordRaw[] = [
         path: 'input',
         component: () => import('@/views/input/index.vue'),
       },
+      {
+        path: 'form',
+        component: () => import('@/views/form/index.vue'),
+      },
+      {
+        path: 'form-utils',
+        component: () => import('@/views/form-utils/index.vue'),
+      },
+      {
+        path: 'dialog',
+        component: () => import('@/views/dialog/index.vue'),
+      },
+      {
+        path: 'table',
+        component: () => import('@/views/table/index.vue'),
+      },
+      {
+        path: 'dialog-with-form',
+        component: () => import('@/views/dialog-with-form/index.vue'),
+      },
     ],
   },
   {

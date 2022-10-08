@@ -10,14 +10,17 @@ defineOptions({
 });
 
 const props = defineProps({
-  modalValue: { type: Number, default: undefined },
+  modelValue: { type: Number, default: undefined },
 });
+const emit = defineEmits(['update:modelValue']);
 
 const localValue = computed({
   get() {
-    return props.modalValue === null ? undefined : props.modalValue;
+    return props.modelValue === null ? undefined : props.modelValue;
   },
-  set() {},
+  set(val) {
+    emit('update:modelValue', val);
+  },
 });
 </script>
 
